@@ -1,5 +1,6 @@
 /**
- * @group faiure
+ * @group failure
+ * @group bcn
  */
 
 const addition = require('./addition');
