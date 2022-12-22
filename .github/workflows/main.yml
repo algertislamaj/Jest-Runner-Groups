@@ -16,8 +16,9 @@ jobs:
         run: |
           sudo rm -rf node_modules
           npm install
-          npm i -g jest-cli
-          jest subtraction.*.*
+          npm test -- --group=bcn
+
+  
   JestUbuntu:
     runs-on: ubuntu-20.04
     steps:
@@ -26,5 +27,4 @@ jobs:
         run: |
           sudo rm -rf node_modules
           npm install
-          npm i -g jest-cli
-          jest addition.*.*
+          npm test -- --group=azure
