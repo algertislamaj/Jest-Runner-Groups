@@ -24,13 +24,15 @@ To get started with testing using jest-runner-groups:
 1. Install the package in your project:
 
     ```bash
-    npm install jest-runner-groups --save-dev
+    npm i jest-runner-groups
     ```
 
 2. Annotate your Jest test suites or test cases with group names:
 
     ```javascript
-    describe('@group groupname', () => {
+/**
+ * @group yourgroupname
+ */
         // Your test cases here
     });
     ```
@@ -38,16 +40,5 @@ To get started with testing using jest-runner-groups:
 3. Run Jest tests using the jest-runner-groups:
 
     ```bash
-    npx jest-runner-groups
+    npm test -- --group=yourgroupname
     ```
-
-## Example
-
-Here's an example of annotating a test suite with a group name:
-
-```javascript
-describe('@group integration', () => {
-    test('should perform integration test', () => {
-        // Your integration test code here
-    });
-});
